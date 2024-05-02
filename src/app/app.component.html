@@ -3,29 +3,28 @@
 <!-- Header Section -->
 <header>
   <h1>Clash Royale Card Catalog</h1>
-  <div class="navbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/card-catalog">Card Catalog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/favorites">Favorites</a>
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid"> <!-- Add a container fluid to make it full width -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto"> <!-- Use mx-auto to center the items -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/card-catalog">Card Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/favorites">Favorites</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 <main>
   <div class="container">
     <router-outlet></router-outlet>
   </div>
 </main>
-
-
-
-
-<!-- Footer Section -->
 <footer class="footer mt-4">
   <div class="container">
-    <span class="text-muted">Copyright © 2024 Clash Royale Card Catalog. All rights reserved.</span>
+    <p>This is a College Project</p>
   </div>
 </footer>
