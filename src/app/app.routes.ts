@@ -1,5 +1,4 @@
 
-
 import { Routes } from '@angular/router';
 import { CardCatalogComponent } from './card-catalog/card-catalog.component';
 import { FavoritesComponent } from './favorites/favorites.component';

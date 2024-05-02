@@ -1,4 +1,4 @@
-// Define an interface for the card data
+
 export interface Card {
     name: string;
     id: number;

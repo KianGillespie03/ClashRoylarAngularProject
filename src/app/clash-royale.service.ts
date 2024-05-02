@@ -12,14 +12,11 @@ export class ClashRoyaleService {
 
   constructor(private http: HttpClient) { }
 
-  // Example method to fetch card data
   getCards(): Observable<{items: Card[]}> {
-    // Define the headers with the Authorization token
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.apiToken}`
     });
 
-    // Make the HTTP GET request with the headers
     return this.http.get<{items: Card[]}>(this.apiUrl, { headers });
   }
 }

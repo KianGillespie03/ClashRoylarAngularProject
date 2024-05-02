@@ -7,19 +7,19 @@ import { Card } from './cardinterface';
   providedIn: 'root'
 })
 export class FavoriteService {
-  private apiUrl = 'mongodb+srv://KianGillespie:kXCuLP2RmrFzNwqH@cluster0.srmihye.mongodb.net/favorites'; // Replace with your actual backend API endpoint
+  private apiUrl = 'mongodb+srv://KianGillespie:kXCuLP2RmrFzNwqH@cluster0.srmihye.mongodb.net/favorites';
 
   constructor(private http: HttpClient) { }
 
   addFavorite(cardId: number): Observable<{items: Card[]}> {
-    return this.http.post<{items: Card[]}>(`${this.apiUrl}/add`, { cardId }); // Example endpoint for adding a favorite card
+    return this.http.post<{items: Card[]}>(`${this.apiUrl}/add`, { cardId });
   }
 
   removeFavorite(cardId: number): Observable<{items: Card[]}> {
-    return this.http.delete<{items: Card[]}>(`${this.apiUrl}/remove/${cardId}`); // Example endpoint for removing a favorite card
+    return this.http.delete<{items: Card[]}>(`${this.apiUrl}/remove/${cardId}`); 
   }
 
   getFavorites(): Observable<{items: Card[]}> {
-    return this.http.get<{items: Card[]}>(`${this.apiUrl}`); // Example endpoint for fetching all favorite cards
+    return this.http.get<{items: Card[]}>(`${this.apiUrl}`);
   }
 }

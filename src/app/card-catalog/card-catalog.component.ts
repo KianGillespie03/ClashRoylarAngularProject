@@ -24,11 +24,10 @@ export class CardCatalogComponent implements OnInit {
     this.fetchCards();
   }
 
-  // Method to fetch cards from Clash Royale API
   fetchCards(): void {
     this.clashRoyaleService.getCards().subscribe(
       (response) => {
-        console.log('API Response:', response); // Log the response
+        console.log('API Response:', response);
         this.cards = response.items;
         this.filteredCards = this.cards
       },
@@ -55,15 +54,9 @@ export class CardCatalogComponent implements OnInit {
   }
 
   toggleFavorite(cardId: number): void {
-    // Check if the card is already favorited
-    // If it is, remove it from favorites; otherwise, add it
-    // This logic depends on how you want the favorite feature to work
-    // You can store the favorites in local storage or in the backend
-    // This example assumes that you have a service to manage favorites
     this.favoriteService.addFavorite(cardId).subscribe(
       (response) => {
         console.log('Card added to favorites:', response);
-        // Update UI to reflect the change in favorite status
       },
       (error) => {
         console.error('Error adding card to favorites:', error);
