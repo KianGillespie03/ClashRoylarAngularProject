@@ -1,0 +1,16 @@
+<p>favorites works!</p>
+
+<!-- favorite.component.html -->
+
+<div *ngIf="favoriteCards.length > 0">
+    <h2>Favorite Cards</h2>
+    <div class="card" *ngFor="let card of favoriteCards">
+      <img class="card-img-top" [src]="card.iconUrls.medium" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ card.name }}</h5>
+        <p class="card-text">Elixir Cost: {{ card.elixirCost }}</p>
+        <button class="btn btn-danger" (click)="removeFavorite(card.id)">Remove from Favorites</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+h1 {
+    text-align: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    /* Additional styles for links */
+  }
+  
+
+

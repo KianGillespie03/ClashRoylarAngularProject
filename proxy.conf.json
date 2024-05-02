@@ -1,0 +1,8 @@
+{
+  "/echo": {
+    "target": "https://api.clashroyale.com/v1/cards",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

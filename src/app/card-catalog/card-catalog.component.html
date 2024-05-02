@@ -1,0 +1,22 @@
+<p>card Catalog works</p>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search cards..." (input)="filterCards($event)">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="clearSearch()">Clear</button>
+  </div>
+</div>
+
+
+
+<div class="card" *ngFor="let card of cards">
+    <img class="card-img-top" [src]="card.iconUrls.medium" alt="Card Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ card.name }}</h5>
+      <p class="card-text">Elixir Cost: {{ card.elixirCost }}</p>
+      <button (click)="toggleFavorite(card.id)">Toggle Favorite</button>  
+    </div>
+  </div>
+
+  
+  
